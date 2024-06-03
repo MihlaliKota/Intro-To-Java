@@ -54,3 +54,59 @@ Java has eight fundamental data types, including four integral types: byte, shor
 - Primitive data types
 
 Moving on to decimal data types in Java, we have float and double. Float provides seven decimal digits, while double offers greater precision with 16 decimal digits. The boolean type simplifies things by representing true or false, akin to one and zero. Lastly, char is used for single characters and should be enclosed in single quotes, distinguishing it from strings.
+
+## Local Variable Type Inference
+-------------------------------- 
+
+In Java, although it is statically typed, it supports type inference for local variables. This feature enables you to declare a variable using the keyword VAR, allowing Java to determine the data type based on the assigned value. See the following example for illustration.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/eb90aa49-3932-4237-b243-8f33c7a96037)
+- Variable type inference
+
+When declaring a variable like `isWaterWet`, you can choose to use `VAR` instead of `boolean`. However, with `VAR`, you must initialize the variable immediately upon declaration. This type inference only applies to local variables within methods, not global variables at the class level.
+
+## Naming Variables
+-------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/ba8fbfa5-2879-4661-b7da-6f20c0f212a0)
+- Creating variables
+
+In the GrossPayCalculator program, descriptive variable names like 'hours' and 'payRate' are used to clearly indicate their purpose. While some programmers might use shortcuts like 'h' and 'r', this is not recommended as it can lead to confusion both for others and oneself. Therefore, it is essential to use descriptive names for variables, methods, classes, and packages. This practice is particularly important when collaborating, as it ensures that others can easily understand and update the code.
+
+In Java, variable names can include numbers, special characters like $ or _, but avoid dashes and reserved words. The first character should not be a number. If you accidentally use an invalid name, the compiler will alert you.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/c2322acd-1c1a-4c4f-9323-0e71122387d1)
+- Variable naming rules in Java
+
+## Modifying Variables
+----------------------
+
+The original GrossPayCalculator program uses fixed values for hours and pay rate, resulting in the same output each time it runs. To enhance the program's flexibility, we can initialize the hours and payRate variables to default values of zero and then prompt the user to input their own values. This allows the program to accommodate different user inputs.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/51416079-ec83-4038-92c2-a0f0a6212ad3)
+- Hard coded variables
+
+To read user input in Java, we use a Scanner object. We declare it as `Scanner scanner = new Scanner(System.in)`, which imports the Scanner class from the java.util package. The scanner object allows us to read user input and store it in variables like hours and payRate. After using the scanner, we close it to prevent memory leaks.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/039dfc72-988e-44eb-8fbc-2ed915f8a79b)
+- Dynamic Variables
+
+The program worked with different numbers for hours and pay rate. You could enter anything, like 30 hours and 8.25 US dollars per hour. 
+
+## Arithmetic Operators
+-----------------------
+
+Java has five operators for basic math calculations. They work with numeric values, such as bytes, shorts, ints, longs, floats, and doubles. 
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/58a310ed-52b6-4fa6-a98c-5359f1880ce6)
+- Arithmetic Operators
+
+In Java, the basic arithmetic operators include:
+
+- The plus sign (+) for addition, which can also concatenate strings.
+- The minus sign (-) for subtraction.
+- The asterisk sign (*) for multiplication.
+- The slash sign (/) for division.
+- The percent sign (%) for the modulo operation, which returns the remainder of a division operation. For instance, 5 modulo 2 equals 1 because 5 divided by 2 leaves a remainder of 1.
+
+
