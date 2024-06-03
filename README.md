@@ -101,6 +101,8 @@ In the top-right corner, we have buttons for running and debugging our program. 
 
 The run button is currently grayed out because we have not written any Java code yet. To enable the button and run our program, we need to create a Java program first. Let's dive in and start writing some Java code! Exciting times are ahead as we begin our Java programming journey.
 
+
+
 ### Java Variables
 -----------------
 
