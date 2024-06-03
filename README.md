@@ -96,7 +96,7 @@ Additionally, we need to link the JDK (Java Development Kit) in the external lib
 
 In the top-right corner, we have buttons for running and debugging our program. For now, we can simply hit the play button to compile and run the program.
 
-![Uploading image.png…]()
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/87f6b9e6-427e-445f-8c5e-628ce7c2fc41)
 - Setting up a project in Intellij
 
 The run button is currently grayed out because we have not written any Java code yet. To enable the button and run our program, we need to create a Java program first. Let's dive in and start writing some Java code! Exciting times are ahead as we begin our Java programming journey.
