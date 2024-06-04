@@ -140,8 +140,83 @@ Now, here's the exciting part: we can simplify the running process. After the in
 
 Once we've made the changes, the Play button turns green. Clicking it runs our program again, and the console outputs the familiar "Hello World!" message. Congratulations, we've successfully run our first Java program using our IDE.
 
-### Java Variables
------------------
+## Java Essentials
+
+### Java Essentials - Packages
+------------------------------
+
+In Java, a package is a folder or container that holds related Java files. To create a package, you first need to set up a project. In IntelliJ, follow these steps:
+
+1. Select "New Project"
+2. Choose Java
+3. Click "Next"
+4. Do not choose a template
+5. Name the project "Fundamental"
+6. Click "Finish"
+
+This will create a new Java project named "Fundamental" in IntelliJ.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/4224681f-6396-407c-bbe4-5516c4d2cc0f)
+- Creating a Java package
+
+In the project view on the left side, we can see the source folder, which is currently empty since this is a brand new project. To create a new package under the source folder, we can right-click, hover over "New," and select "Package."
+
+Packages in Java are like special folders that hold one or more Java files. It's a good idea to organize your code into multiple packages, depending on how it's structured. Packages help group related Java files together.
+
+When prompted to name the package, let's follow the convention and call it "gross_calculator" since it will house the files for this part of the course. After hitting Enter or clicking "OK," you'll see the new "gross_calculator" package in the source folder, indicated by a circular icon.
+
+### Classes
+-----------
+
+To create a new class, right-click on the package, select "New," and then choose "Java Class." Java class names typically start with an uppercase letter. For our gross pay algorithm, we name the class "GrossPayCalculator." Since Java does not allow spaces in class names, we use a three-word name without spaces. Each word starts with an uppercase letter, following Java conventions. After naming the class, press Enter to create the new class within the package.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/adaac2fa-fb2e-484e-b8a8-9f36da16c550)
+- Creating Java Classes
+
+In Java, packages contain Java files, which are also called classes. To create a new class, you can right-click on the package and select the option to create a new Java class.
+
+The open tab displays the name of the class as "GrossPayCalculator.java." It's important to note that all Java files have a ".java" extension, which indicates that they are Java source code files.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/95804e4b-5d6c-458d-b565-efcfe2a221dc)
+- Creating a Java classes file
+
+To make the tab larger, double-click it in the editor. The first line of the Java file is the package declaration. If a Java file belongs to a package (like ours), the first line should declare the package name followed by a semicolon (;). The declaration consists of the word "package" followed by the exact name of the chosen package.
+
+After the package declaration, you'll find the class declaration. Every Java file contains a Java class. This class is declared as a public class named "GrossPayCalculator," enclosed in curly braces. In Java, curly braces group sections of code together. Congratulations! We have created our first Java class. 🎉
+
+### Main Method
+---------------
+
+When you see curly braces in Java, remember that any code placed between them is part of the Java class. These curly braces are like code containers, and inside one of them, we will create a method, which is another code container. To make your code run in a Java class, it must be nested inside a method.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/1e839e06-320a-4941-bddf-d4f8b015522c)
+- Creating a Java method
+
+To create a method, you would write "public static void main" followed by curly braces. This method is called the "main method" and is where a Java program starts running. When you run the class, Java looks for this main method and begins execution from there. The method must be exactly as specified, with the curly braces and all.
+
+Methods always include curly braces, and everything inside them belongs to that specific method. To see the method in action, we should insert a print statement. In Java, we use "System.out.println" followed by what we want to display within parentheses. A common beginner task is to print "Hello World," so let's do that. We will write "Hello World" inside quotes and end the line with a semicolon.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/9f9657c5-8219-4f30-9828-26eba29c118a)
+- Writing and running a Java print statement
+
+This line is an instruction that tells Java to display text on the console, and the semicolon marks the end of the instruction. Our class now has a main method with one instruction. To run it for the first time, right-click anywhere in the program and select the 'run' option. You will see a console window open and print 'Hello World' as we instructed. Congratulations, you have created your first Java program.
+
+### Reserved Words
+------------------
+
+When examining the code, notice the different-colored words. The specific colors may vary depending on your editor and theme, but in this context, we are referring to words like "package," "public," "class," "static," and "void." These are known as keywords in Java.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/03923158-702b-4189-807a-0eeb6e29743a)
+- Java reserved words
+
+In programming, certain words are reserved and have specific meanings defined by the language. These reserved words cannot be used as variable or element names in our program. For example, we cannot name something "class," "public," or "package" because these words are reserved by Java for specific purposes.
+
+There is a long list of reserved words in Java. As we continue to work together, pay attention to the colors in your code. When you type something and it changes color to indicate a reserved word, remember that you have encountered another special term.
+
+## Java Variables
+
+### Creating Variables
+----------------------
 
 ![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/25c9e719-f743-4a3f-b0b0-26292db32f8c)
 - Algorithm to calculate an employee’s gross pay
