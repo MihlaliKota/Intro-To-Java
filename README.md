@@ -101,7 +101,44 @@ In the top-right corner, we have buttons for running and debugging our program. 
 
 The run button is currently grayed out because we have not written any Java code yet. To enable the button and run our program, we need to create a Java program first. Let's dive in and start writing some Java code! Exciting times are ahead as we begin our Java programming journey.
 
+### Writing Your First Java Program
+-----------------------------------
 
+We are now ready to write our first Java program. To begin, we will create a new Java file in the SRC folder. We have two options to do this: either hover over "New" and create a new Java class called "Hello World" or go to "File" and select "New" > "Java class" to achieve the same result.
+
+Java is known for its verbosity, which means it requires more words to write a simple program. While this can be a drawback for some, it is beneficial for beginners as it helps to clarify concepts and keep the code organized. Every Java program must include a class, which serves as the foundation for all Java code. This is why our file already includes the "public class Hello World" code snippet.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/d3eade6f-3ad9-41fc-b448-cfcccb26265a)
+- Writing your first Java program
+
+Now, let's get to the exciting part of writing our first Java program. In computer science, when learning a new language or technology, the traditional first step is to create a program that prints "Hello World." That is exactly what we will do today. To write the code, we will use the code editor in the main pane. If you accidentally close the file, don't worry; you can easily reopen it by double-clicking it in the SRC folder.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/4534f427-414e-4740-a7ff-370d90fa504a)
+- HelloWorld program
+
+To modify the code, we are adding extra Java code within the curly brackets. Inside these brackets, we find the `main` function, which serves as the starting point for the program. Any code written within these brackets will be executed when we hit the run button. Up until this point, we have covered the basics of Java programming, but now we can add our own unique touches.
+
+Our program can be customized by what we add within these curly brackets. For example, we can modify the "Hello World" program to print "Hello World, it is me, Kathryn." To achieve this, we use the `System.out.println` method, which is the Java way to output text. We simply place the desired text within the parentheses, such as "Hello World, it is me, Kathryn."
+
+You might be wondering about the "public" keyword in Java, but don't worry; we will explore this concept further in future chapters. For now, we will focus on understanding `void` and `static` in the context of Java programming.
+
+### Running Your First Java Program
+-----------------------------------
+
+We have our code, and we want to make some changes. We can easily add more Java code within the curly brackets.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/7de3d54f-5563-43eb-8ad4-d5af612c1405)
+- Running your first Java program
+
+The `main` function is the central hub of our program, where everything gets executed when we run the program. So far, we have covered the basic elements that every Java program needs to get started.
+
+The `HelloWorld` class plays the main role, and `main` is the supporting function. When we click the "Run HelloWorld.main" button in the IDE, it's like magic Our program runs without needing manual commands.
+
+After running the program, we see a console window at the bottom of the screen, where the program shares its inner workings. It greets us with a "Hello World!" message, just like Yoda saying hi.
+
+Now, here's the exciting part: we can simplify the running process. After the initial run, we can find a shortcut to a one-click performance in the top-right corner. We can edit this configuration to make it easier to run our program.
+
+Once we've made the changes, the Play button turns green. Clicking it runs our program again, and the console outputs the familiar "Hello World!" message. Congratulations, we've successfully run our first Java program using our IDE.
 
 ### Java Variables
 -----------------
