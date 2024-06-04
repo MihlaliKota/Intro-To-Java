@@ -240,7 +240,7 @@ In this example, we have a variable called "hours" that will hold an integer val
 To calculate the gross pay, we multiply the "hours" variable by the "pay rate" variable and store the result in a new variable called "gross pay." Since the multiplication of an integer and a decimal can result in a decimal, we declare "gross pay" as a "double" data type. Finally, we print the result using "System.out.println," creating a string that includes the "gross pay" variable.
 
 ### Primitive Data Types
------------------------
+------------------------
 
 Java has eight fundamental data types, including four integral types: byte, short, int, and long. These types differ in the amount of memory they occupy, which determines the range of values they can represent. For example, byte uses 8 bits of memory and can store values up to 256, while long utilizes 64 bits and can handle numbers as large as 9.2 quintillion.
 
@@ -250,7 +250,7 @@ Java has eight fundamental data types, including four integral types: byte, shor
 Moving on to decimal data types in Java, we have float and double. Float provides seven decimal digits, while double offers greater precision with 16 decimal digits. The boolean type simplifies things by representing true or false, akin to one and zero. Lastly, char is used for single characters and should be enclosed in single quotes, distinguishing it from strings.
 
 ### Local Variable Type Inference
--------------------------------- 
+---------------------------------
 
 In Java, although it is statically typed, it supports type inference for local variables. This feature enables you to declare a variable using the keyword VAR, allowing Java to determine the data type based on the assigned value. See the following example for illustration.
 
@@ -260,7 +260,7 @@ In Java, although it is statically typed, it supports type inference for local v
 When declaring a variable like `isWaterWet`, you can choose to use `VAR` instead of `boolean`. However, with `VAR`, you must initialize the variable immediately upon declaration. This type inference only applies to local variables within methods, not global variables at the class level.
 
 ### Naming Variables
--------------------
+--------------------
 
 ![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/ba8fbfa5-2879-4661-b7da-6f20c0f212a0)
 - Creating variables
@@ -273,7 +273,7 @@ In Java, variable names can include numbers, special characters like $ or _, but
 - Variable naming rules in Java
 
 ### Modifying Variables
-----------------------
+-----------------------
 
 The original GrossPayCalculator program uses fixed values for hours and pay rate, resulting in the same output each time it runs. To enhance the program's flexibility, we can initialize the hours and payRate variables to default values of zero and then prompt the user to input their own values. This allows the program to accommodate different user inputs.
 
@@ -288,7 +288,7 @@ To read user input in Java, we use a Scanner object. We declare it as `Scanner s
 The program worked with different numbers for hours and pay rate. You could enter anything, like 30 hours and 8.25 US dollars per hour. 
 
 ### Arithmetic Operators
------------------------
+------------------------
 
 Java has five operators for basic math calculations. They work with numeric values, such as bytes, shorts, ints, longs, floats, and doubles. 
 
