@@ -303,4 +303,418 @@ In Java, the basic arithmetic operators include:
 - The slash sign (/) for division.
 - The percent sign (%) for the modulo operation, which returns the remainder of a division operation. For instance, 5 modulo 2 equals 1 because 5 divided by 2 leaves a remainder of 1.
 
+## Decision Structures in Java 
 
+### If Statements
+-----------------
+
+In computer programming, decision-making is a crucial aspect, and it's achieved through the use of decision structures, with the "if statement" being the most widely used. This statement enables programs to follow different execution paths based on specific conditions.
+
+To illustrate this concept, let's consider a scenario involving a team of salespeople who earn a base salary of $1,000 per week. However, if a salesperson exceeds 10 sales in a given week, they receive an additional bonus of $250. Typically, the program would pay the salesperson their standard wage of $1,000. However, it needs to evaluate whether the salesperson has made more than 10 sales. If that condition is met, the program adds the $250 bonus to their payment, thereby increasing their overall compensation for that week.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/12f90beb-384a-437d-b814-6b383259d378)
+- If statements
+
+The provided code utilizes an If statement to determine whether an employee qualifies for a bonus based on their sales performance. The If statement evaluates if the number of sales made by the employee exceeds a predefined quota. If the sales count surpasses the quota, the employee receives a bonus of $250 in addition to their regular compensation. However, if the sales count does not exceed the quota, the employee does not receive any bonus.
+
+To thoroughly test and comprehend the code's execution, you can run it in debug mode, which allows you to step through the code line by line. For instance, if you run the code with 10 sales, the If statement will not execute because 10 is not greater than the quota. Consequently, the employee's salary will remain at $1,000. Conversely, if you run the code with 15 sales, the If statement will execute because 15 exceeds the quota. In this case, the employee's salary will be $1,250, which includes the base salary and the $250 bonus.
+
+### If-else statements
+----------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/72a100e8-33c3-48f7-9930-28cfb3e4706f)
+- If-else statement
+
+The if-else statement is a decision-making construct in programming that enables a program to follow one of two distinct paths based on whether a specific condition is satisfied or not. It serves as a conditional branching mechanism that allows the program to execute different blocks of code depending on the evaluation of the provided condition.
+
+To illustrate, consider a scenario where a program needs to determine if a salesperson has achieved their sales quota. In this case, the program could utilize an if-else statement. If the salesperson has indeed met their quota, the program would execute a block of code that prints a congratulatory message, acknowledging their accomplishment. However, if the salesperson has not met the quota, the program would instead execute an alternative block of code that prints a message encouraging them to put in more effort during the next sales period.
+
+The if-else statement provides a structured way for programs to make decisions and execute different actions based on the fulfillment or violation of specific conditions, thereby introducing control flow and branching logic into the program's execution.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/f1edda53-8d62-4cce-baa9-c308b590d9fb)
+- If-else statements in QuotaChecker
+
+The provided code is designed to evaluate whether a user has met a predefined sales quota and provide feedback accordingly. The code begins by initializing the quota to 10 sales. It then prompts the user to input the number of sales they made during the current week. Subsequently, the code employs an if-statement to assess if the user's sales count is greater than or equal to the quota.
+
+If the user's sales meet or exceed the quota, the code will print a message informing them that they have successfully met their quota. Conversely, if the user's sales fall short of the quota, the code will execute the else branch, printing a message that indicates the user did not meet the quota and specifying the number of sales they were deficient by.
+
+The code achieves this by utilizing the salesShort variable, which stores the difference between the quota and the user's actual sales count when the quota is not met. This value is then incorporated into the message displayed to the user, providing them with specific feedback on the number of sales they need to make up.
+
+Overall, this code demonstrates the implementation of conditional branching using an if-else statement, allowing the program to follow two distinct execution paths based on whether the user's sales performance meets the predetermined quota or not. It exemplifies how programming languages provide control structures to handle alternative scenarios within a single code block.
+
+### If-Else-If Statements
+-------------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/5dd14c1e-4287-41e5-8eef-b6f067f0c1fc)
+- If-Else-If statement
+
+The if-else-if statement is a versatile tool that can be used to control the flow of a program. It can be used to execute different code blocks based on multiple conditions, which can be helpful for things like grading tests, determining eligibility for discounts, or making other decisions.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/b7b5b647-b693-484b-822f-b6160989da52)
+- If-Else-If decision structure
+
+The provided code aims to determine a student's grade based on their numerical score. The grading system consists of five possible grades: A, B, C, D, and F. To assign the appropriate grade, the code employs an if-else-if decision structure, which allows it to cover all five potential grade outcomes.
+
+Initially, the code declares a character variable called `grade` to store the final grade value. Since the value of the grade is unknown at this point, the if-else-if decision structure is used to evaluate the score and determine the corresponding grade.
+
+The process begins with an if statement that checks if the score is less than 60. If this condition is true, the `grade` variable is updated to 'F'. If the condition is false, the code moves on to the next condition.
+
+The next condition checks if the score is less than 70. If this condition is true, the `grade` variable is assigned the value 'D'. If the condition is false, the code proceeds to the subsequent condition.
+
+The third condition evaluates whether the score is less than 80. If this condition holds, the `grade` variable is set to 'C'. If the condition is false, the code continues to the following condition.
+
+The fourth condition checks if the score is less than 90. If this condition is true, the `grade` variable is assigned the value 'B'. If the condition is false, the code moves to the final else block.
+
+In the final else block, if none of the previous conditions were met, the `grade` variable is assigned the value 'A'. This condition is satisfied when the score is greater than or equal to 90.
+
+By employing this if-else-if decision structure, the code ensures that all possible grade outcomes are covered, and the appropriate grade is assigned based on the provided score. This approach demonstrates how programming languages provide control structures to handle multiple conditions and execute different code paths based on the evaluation of those conditions.
+
+### Switch Statements
+---------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/c57f696c-ee88-4589-9b46-aa40c8fc9d7a)
+- Switch statements
+
+The switch statement is a control flow structure in programming that operates similarly to the if-else-if decision structure, but it is particularly well-suited for situations involving multiple options or cases. The key difference between the switch statement and the if-else-if structure lies in the way they evaluate conditions. While the if-else-if structure checks for various logical conditions, the switch statement specifically checks for equality against a given value or expression.
+
+To illustrate the use of the switch statement, consider a scenario where a user inputs their grade as a letter (e.g., A, B, C, D, or F). The switch statement can be employed to display a corresponding message based on the user's input grade. The program would evaluate the provided letter grade against multiple cases within the switch statement, and when a matching case is found, the associated code block would execute, displaying the appropriate message.
+
+The switch statement simplifies the coding process when dealing with multiple cases or options, as it provides a more concise and readable syntax compared to using multiple nested if-else statements. Instead of checking for various conditions, the switch statement directly compares the input value against predefined cases, making it efficient and easier to maintain, especially when dealing with a large number of potential cases.
+
+In summary, the switch statement is a powerful control flow structure that excels in scenarios where there are multiple options or cases to be evaluated based on the equality of a value or expression. It offers a more concise and readable alternative to the if-else-if structure, particularly when dealing with a large number of potential cases, enhancing code readability and maintainability.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/4d862747-f81e-4de1-9bb0-2f9b89dd9310)
+- Switch statements decision structures
+
+The code has a variable called "grade" that stores the user's letter grade input. There's another variable called "message" that needs to be assigned a corresponding message based on the grade value. This is where the switch statement comes into play.
+
+The switch statement starts with the keyword "switch" followed by parentheses containing the expression to be evaluated, in this case, the "grade" variable. Inside the curly braces, multiple cases are defined.
+
+Each case represents a possible value of the "grade" variable. For example, case 'A': would handle the situation when the grade is 'A'. After the colon, you can specify the code to be executed for that particular case, such as setting the "message" variable to "Excellent job".
+
+It's important to include a "break" statement after each case's code block. This ensures that the program exits the switch statement after executing the code for the matching case, preventing it from executing the code for the subsequent cases.
+
+The switch statement allows you to cover all valid grade values by defining a case for each letter grade (e.g., 'A', 'B', 'C', 'D', 'F'). If the user inputs an unexpected value that doesn't match any of the defined cases, the "default" case is executed, acting as a catch-all for invalid inputs.
+
+It's crucial to remember that only one case will be executed – the first one that matches the evaluated expression. If a "break" statement is omitted, the program will continue executing the code for the subsequent cases until it encounters a "break" or reaches the end of the switch statement, leading to unintended behavior.
+
+While the if-else-if structure is suitable for a variety of conditions, the switch statement can be more concise and readable when dealing with multiple cases based on equality checks against a single expression or variable.
+
+The explanation emphasizes the importance of choosing the appropriate control flow structure (if-else-if or switch) based on the specific requirements of the task at hand.
+
+### Switch Expressions
+----------------------
+
+Switch expressions provide a more concise and convenient way to assign values based on various cases, particularly when assigning values to variables.
+
+Instead of declaring a separate variable and then assigning its value using a switch statement, switch expressions allow you to combine these steps into a single expression. This is achieved by placing an equal sign (=) after the variable name and moving the switch structure to the right side of the assignment.
+
+Additionally, switch expressions utilize an arrow (->) notation instead of the colon (:) followed by the assignment, making the case statements more concise and readable. The arrow notation represents the assignment operation for the corresponding case.
+
+For example, if you have a variable called "message" that needs to be assigned a value based on a letter grade, you can use a switch expression like this:
+
+```
+message = switch (grade) {
+    case 'A' -> "Excellent job";
+    case 'B' -> "Well done";
+    // ... other cases
+    default -> "Invalid grade";
+};
+```
+
+In this example, the value assigned to the "message" variable is determined by the switch expression, which evaluates the "grade" variable against the defined cases. If the grade is 'A', the "message" variable is assigned the value "Excellent job". If it's 'B', the value "Well done" is assigned, and so on.
+
+The use of switch expressions streamlines the code by combining the variable declaration, value assignment, and case evaluation into a single expression. This approach can make the code more concise, readable, and easier to maintain, especially when dealing with multiple cases and variable assignments.
+
+In summary, switch expressions are an enhanced version of switch statements that allow for more compact and convenient variable assignments based on various cases, utilizing an arrow notation for assignment within each case.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/9ef8371e-8bd3-4608-adad-8150e59ca9e8)
+- Switch expressions
+
+Additional advantages and use cases of switch expressions compared to traditional switch statements. Here's a summary:
+
+1. No need for break statements: One of the benefits of switch expressions is that they don't require break statements like switch statements do. This eliminates the need to include break statements after each case, making the code more concise and reducing the risk of accidental fallthrough errors.
+
+2. Semicolon after closing curly brace: Switch expressions have a more streamlined look, as they require a semicolon after the closing curly brace, making the overall syntax cleaner.
+
+3. Handling multiple cases with the same code: Switch expressions allow you to list multiple cases separated by commas, making it easier to handle situations where the same code needs to be executed for multiple cases. For example, if you want to assign the same message for both 'A' and 'B' grades, you can list case 'A', case 'B': "Excellent work".
+
+4. Including more than just assignments: While switch expressions are particularly useful for assigning values, they are not limited to that. You can include more complex code within each case by enclosing the statements in curly braces after the arrow. This allows for greater flexibility and more intricate logic within each case.
+
+The explanation also provides guidance on when to choose between switch statements and switch expressions. If the primary goal is to assign a value based on different cases, switch expressions are an excellent choice due to their concise syntax and the ability to handle assignments seamlessly. However, if the requirement is to simply execute different statements based on different cases without assigning values, traditional switch statements might be more suitable.
+
+In summary, switch expressions offer several advantages over switch statements, including the elimination of break statements, a more streamlined syntax, the ability to handle multiple cases with the same code, and the flexibility to include more complex logic within each case. The choice between switch statements and switch expressions should be based on the specific requirements of the task at hand.
+
+### Relational Operators
+------------------------
+
+Relational operators are these symbols that you use when you are dealing with conditions. Think of them like decision-making tools in Java. Picture this: Java has these six special operators, and they help us figure out if something's true or false.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/63591cf6-bc9e-4171-8f49-37ba9cf05455)
+- Relational Operators
+
+This is a breakdown and explanation of the six relational operators in Java:
+
+1. **Greater Than Operator (`>`):** This operator checks if the value on the left-hand side is greater than the value on the right-hand side. For example, if we compare "Is 2 greater than 3?", the answer would be false.
+
+2. **Less Than Operator (`<`):** This operator does the opposite of the greater than operator. It checks if the value on the left-hand side is less than the value on the right-hand side. For instance, if we ask "Is 2 less than 3?", the answer would be true.
+
+3. **Greater Than or Equal Operator (`>=`):** This operator checks if the value on the left-hand side is either greater than or equal to the value on the right-hand side. For example, the statement "4 is greater than or equal to 4" would be true.
+
+4. **Less Than or Equal Operator (`<=`):** This operator checks if the value on the left-hand side is either less than or equal to the value on the right-hand side. For instance, the statement "4 is not less than or equal to 3" would be false.
+
+5. **Equal To Operator (`==`):** In Java, a single equal sign (`=`) is used for assignment, not for comparison. To check if two values are equal, we use the double equal sign (`==`). For example, if we ask "Is 3 equal to 2?", the answer would be false.
+
+6. **Not Equal To Operator (`!=`):** This operator checks if two values are not equal. It is denoted by an exclamation mark followed by an equal sign (`!=`). For instance, if we ask "Is 3 not equal to 2?", the answer would be true.
+
+These relational operators are commonly used in conditional statements, such as `if` statements, to make decisions based on the truthfulness of the conditions formed by comparing values using these operators.
+
+### Logical Operators
+--------------------- 
+
+Logical operators let you mix and match conditions to give you one clear yes or no answer, like a Boolean value. They come in handy when you have tricky requirements for making decisions.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/236d79f5-e33d-4716-b417-766c37a15fa6)
+- Logical operators
+
+The explanation provides an overview of the three logical operators in Java: AND (`&&`), OR (`||`), and NOT (`!`). These operators are used to combine or negate conditions in order to make decisions based on multiple criteria.
+
+The example given is about determining if someone qualifies for a loan based on two conditions: earning at least $30,000 and having worked at their current job for at least two years. To evaluate such scenarios with multiple conditions, logical operators come into play.
+
+1. AND Operator (`&&`): This operator is represented by two ampersands (`&&`). It combines two conditions, and for the overall result to be true, both conditions must be true. In the loan example, if the person earns $30,000 or more AND has worked at their job for two years or more, then they qualify for the loan.
+
+2. OR Operator (`||`): This operator is represented by two pipes (`||`). It combines two conditions, and for the overall result to be true, at least one of the conditions must be true. For example, if the loan criteria were "earning $30,000 or more OR having worked at the job for two years or more," the person would qualify if they meet either of those conditions.
+
+3. NOT Operator (`!`): This operator is represented by an exclamation mark (`!`). It negates or flips the truth value of a single condition. If the condition is true, the NOT operator makes it false, and vice versa. For example, if the condition is "NOT earning $30,000 or more," then the person qualifies for the loan if they do not meet the earning criteria.
+
+The explanation highlights that logical operators allow you to combine multiple conditions using AND, OR, or NOT, enabling you to make decisions based on complex criteria. Understanding how these operators work is essential for writing effective conditional statements and control flow structures in Java programs.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/0f0e84e2-c5d0-4c85-ae56-81b07108cf41)
+- Logical operators examples
+
+The explanation covers the usage and behavior of the three logical operators in Java: AND (`&&`), OR (`||`), and NOT (`!`), through practical examples.
+
+1. AND Operator (`&&`):
+The example demonstrates the AND operator with two conditions: `1 <= 2` and `4 <= 5`. The first condition (`1 <= 2`) is true on its own. However, when using the AND operator, both conditions must be true for the overall expression to be true. The second condition (`4 <= 5`) is also true. Since both conditions are true, the final result of the AND operation is true.
+
+2. OR Operator (`||`):
+In this case, the example has two conditions: `3 == 4` and `6 > 1`. The first condition (`3 == 4`) is false, but the second condition (`6 > 1`) is true. With the OR operator, only one of the conditions needs to be true for the overall expression to be true. Since the second condition is true, the final result of the OR operation is true.
+
+3. NOT Operator (`!`):
+The example shows the NOT operator with the condition `2 != 3`. This condition (`2 != 3`) is false on its own. However, when the NOT operator is applied, it flips or negates the truth value of the condition. Therefore, the result of applying the NOT operator to the condition `2 != 3` is true.
+
+The explanation effectively illustrates how the logical operators work by using simple conditions and evaluating the truth values of the overall expressions. It highlights that the AND operator requires both conditions to be true, the OR operator requires at least one condition to be true, and the NOT operator negates or flips the truth value of a single condition.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/24ce7714-4c62-47d9-b115-b62eed820291)
+- Logical operators examples
+
+Here is a little demo of the AND logical operator in an if-else situation. You have two things to check before someone can get a loan:
+
+First, you see if their salary is at least as high as what is needed for the loan. But just having a good salary is not enough by itself. 
+You must also ensure they have worked long enough, like, for the required number of years. 
+Only if both of these checks come out as true will they qualify for the loan. These logical operators are pretty handy because they let you keep the code nice and clean, without getting all tangled up in nested if statements.
+
+### Short Circuit Logic
+-----------------------
+
+The 'and' and 'or' logical operators help us combine two conditions into one. When we use 'and,' both conditions must be true. If the first condition is false, there is no need to check the second one because both have to be true for the whole thing to be true. So, it speeds things up by not evaluating unnecessary conditions.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/c90b8a6f-5219-4945-b6e0-33e355ed3ad0)
+- Short circuiting logic
+
+Similarly, with 'or,' if the first condition is true, there is no need to bother with the second condition. This is like a shortcut in logic, where we stop evaluating once we know the final outcome.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/e4ec6f18-b9c3-4d78-b892-deb7fc56b13c)
+- Short Circuiting Logic AND example
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/8608d4ad-10de-4983-a054-723b0d0b1f06)
+- Short Circuiting Logic OR example
+
+The example provided demonstrates how the logical operators AND (`&&`), OR (`||`), and their evaluation order work in programming. It also showcases the concept of short-circuiting, where the evaluation of subsequent conditions may be skipped if the result can be determined based on the initial conditions. Here's a summary:
+
+1. The example has three conditions combined into one using logical operators.
+2. The program evaluates the conditions from left to right.
+3. For the first combination, `false && true`, the program immediately returns `false` after evaluating the first condition (`false`) because with the AND operator (`&&`), if one condition is `false`, the entire expression must be `false`, regardless of the other condition(s).
+4. In the second combination, `true || false`, the program doesn't bother evaluating the second condition (`false`) because the first condition (`true`) is already `true`, and with the OR operator (`||`), it only requires one `true` condition for the entire expression to be `true`.
+5. The result of the first operation (`true`) is then combined with the next condition using the AND operator (`&&`). Since both conditions are `true`, the entire expression becomes `true`, and the program prints "IF".
+6. The concept of short-circuiting is highlighted, where the evaluation of subsequent conditions is skipped if the result can be determined based on the initial conditions, saving computational resources.
+7. Understanding short-circuiting and the evaluation order of logical operators can help organize conditions more efficiently and potentially optimize code performance.
+
+The explanation effectively conveys how logical operators are evaluated, the concept of short-circuiting, and the importance of understanding these concepts for efficient code organization and potential performance optimizations.
+
+## Repetition Structures in Java
+
+### While Loop
+---------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/192f71c8-a8db-4064-9d2a-85d8e84ff004)
+- Loops image
+
+Loops are a programming construct that allows code to be executed repeatedly, instead of having to write the same set of instructions multiple times. They provide a way to automate repetitive tasks and avoid redundancy in the code. Here's a summary of the key points:
+
+- Loops help prevent the need to copy and paste the same code over and over again, which can lead to maintainability issues and errors.
+- They enable the code to perform a specific task or set of instructions repeatedly, without having to manually write out the same lines of code multiple times.
+- Loops continue to execute the code within their block until a certain condition is met or a specific number of iterations is reached.
+- By using loops, programmers can write more concise and efficient code, making it easier to maintain and update in the future.
+- Loops are a powerful tool that adds automation and efficiency to programming, allowing for the repetition of code execution without manual intervention.
+
+In essence, loops are like a magical spell that enchants the code to perform repeated actions automatically, saving developers time and effort while promoting code quality and maintainability.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/352d36c6-5621-4d7e-b965-132be11479e8)
+- While Loop
+
+Let's explore a problem that requires a loop to solve. Imagine you're running a store where each employee earns $15 per hour. You need to create a program that allows you to input the weekly hours worked by each employee and calculates their pay, but there's a condition: no overtime is allowed!
+
+To address this, we'll use a "GrossPayInputValidator" program. The pay rate is $15 per hour, and employees can work a maximum of 40 hours per week without overtime. We'll ask for the weekly hours worked and store this input in the "hoursWorked" variable, then calculate the gross pay.
+
+However, to prevent overtime, we must validate the input. Simply checking if "hoursWorked" is 40 or less isn't enough since users might enter incorrect values multiple times. We need a way to ensure they provide valid input.
+
+Here's the strategy: Place the input validation inside a loop. We'll use a "while" loop with a condition. If the condition is true, the loop executes the code within the curly braces.
+
+What should trigger our loop? If "hoursWorked" exceeds "maxHours," the loop starts. This indicates that the entered hours are too high, so we keep prompting for the correct input. Inside the loop, we display a message like "Invalid entry. Your hours must be between 1 and 40. Try again." Then, we update the "hoursWorked" variable with the new input.
+
+The loop continues until valid data is entered. It rechecks the condition after each iteration, and if "hoursWorked" is still too high, the loop repeats. Once the correct input is provided and the condition is false, the loop ends, and the program proceeds.
+
+To test the program, inputting 56 hours prompts an error message. Entering 43 hours also triggers an error. But entering a value under 40 exits the loop, allowing the program to calculate and display the pay.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/24af9c51-eaf7-4731-9946-aa638656d678)
+- While loop factors
+
+The deal with while loops is they roll as long as a certain condition holds true. Before diving into the loop, they check if that condition is still a go, and if not, they do not even bother with the loop. You want to go with a while loop when you have a situation where you might have to keep running some code, but it all depends on whether that condition stays legit.
+
+### Do While Loop
+-----------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/601399c2-63ca-445f-8678-eeb35e479e98)
+- Do while loop
+
+A "do while" loop is similar to a "while" loop, but with a key difference: it checks the condition after executing the loop's code, ensuring the loop runs at least once. While "do while" loops aren't as commonly used as "while" loops since the latter typically suffice, it's useful to understand how "do while" loops function.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/9f486b91-4dc1-4f5b-8f0a-6e38db0e2611)
+- Do while loop
+
+In this task, you need to create a program that continuously adds numbers input by the user until they decide to stop. To achieve this, we'll use a "do while" loop, which ensures that the loop runs at least once before checking a condition to determine if it should continue.
+
+Here's the plan: Start with "do" and enclose the loop's actions within curly braces. Inside these braces, include the operations you want the loop to perform. After the braces, add "while" with a condition in parentheses, and don't forget the semicolon to complete it.
+
+The loop's condition will check if the user wants to repeat the process. We'll create a variable called "runAgain" initialized to zero. If "runAgain" equals one, the loop continues. Inside the loop, prompt the user for two numbers, call them "number1" and "number2", then calculate and display their sum.
+
+It's important to update the "runAgain" variable to control the loop. Ask the user if they want to repeat: if they enter "1" for "yes," update "runAgain" to continue; if they enter "2," the loop ends.
+
+When the program starts, it enters the "do while" loop. For example, if the user inputs "2" and "3," the program calculates and displays "5". If they want another round, they can input "1" to continue. If they enter "3" and "4" next, the sum "7" is displayed. Finally, if they enter "2" to stop, the loop ends. This is how the "do while" loop works in this context.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/92ace03e-37f7-4827-8685-203b96e6ceac)
+- Do while loop key factors
+
+The "do while" loop is similar to the "while" loop, but with a key difference: it checks the condition after executing the loop's code. This ensures that the loop runs at least once. If you need a loop that must execute its actions at least once before evaluating a condition to decide whether to repeat, the "do while" loop is the right choice.
+
+### For Loop
+------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/c25d543f-07f5-425d-9e53-3ba30a98b203)
+- For loop
+
+The "for" loop is unique because it's driven by counting rather than a condition. It knows in advance how many times to execute. For example, in a program for a cashier, the "for" loop can keep track of the number of items scanned while calculating the total cost. This makes it ideal for scenarios where the number of iterations is predetermined.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/848e1b7e-c41c-4d42-bcb5-71442bc3ac1e)
+- For loop
+
+On line 18, we stored the number of items the cashier wants to scan, and on line 20, we set the total price to zero. Now, we set up a "for" loop to sum the prices of each item. To begin, write "for" followed by parentheses containing three statements:
+
+1. The first statement initializes a counter, "i," to track the number of loop iterations, typically starting from zero. If the cashier scans three items, "i" will range from zero to two, covering three iterations.
+2. The second statement specifies the condition for the loop to continue: "i" must be less than the number of items. This ensures the loop runs the correct number of times.
+3. The third statement updates the counter, incrementing "i" by one using "i++."
+
+Enclose the loop's actions in curly braces. Inside the loop, prompt for the price of each item and add it to the total. After the loop finishes, print the total price outside the loop, as it should only be displayed once. Close the scanner and print the total with a message like "Your total is" followed by the total amount.
+
+To test this, run the program in debug mode, setting a breakpoint inside the loop. When prompted for the number of items, enter four. The loop starts with "i" at zero and asks for the item cost. Entering 20 updates the total to 20 and increments "i" to one. Repeating this process with costs of 30, 10, and 25 updates the total accordingly. The loop exits after the fourth item, and the final total is displayed.
+
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/9d24051a-9f09-400e-8950-a22ef410210f)
+- For loop Key factors
+
+When using "for" loops, remember these key points: they are designed for counting and will run the specified number of times without deviation. They check the condition before each iteration, ensuring precise control. If you need a loop to execute a set number of times, "for" loops are the ideal choice.
+
+### Nested Loops
+----------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/eb22ef41-8189-4744-8c3d-152a00eebc1e)
+- Nested Loop
+
+When handling tasks that include repetitive sub-tasks, you can use a loop within another loop, known as "nested loops." For instance, to calculate the average test scores for a class of 24 students who took four tests each, you would use nested loops. The outer loop would iterate through each student, and the inner loop would handle the scores of the four tests for each student.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/0f731a34-1ff6-4369-8631-1310d8a7ad25)
+- Nested loop
+
+To handle the task of processing test scores for 24 students, we use nested "for" loops. Here's how it works:
+
+1. **Outer Loop (Students):**
+   - We start by initializing a variable "i" to zero.
+   - The loop continues as long as "i" is less than the total number of students (24).
+   - With each iteration, we increment "i" by one, focusing on one student per loop cycle.
+
+2. **Inner Loop (Tests):**
+   - For each student, we initialize a new variable "j" to zero for another loop to handle their test scores.
+   - This loop runs four times, once for each test.
+   - We cannot reuse "i" from the outer loop, so we use "j" to count the tests.
+
+3. **Calculating Scores:**
+   - Before entering the inner loop, we initialize a "total" variable to zero to accumulate the test scores.
+   - Inside the inner loop, we prompt for and read each test score, adding it to "total".
+   - For clarity, we use "j + 1" when displaying the test number since "j" starts at zero.
+
+4. **Calculating Averages:**
+   - After exiting the inner loop, we calculate the average score for the student by dividing "total" by the number of tests.
+   - We print the average, displaying the student number as "i + 1" for better readability.
+
+5. **Repeat for All Students:**
+   - The outer loop continues, repeating the process for all 24 students.
+
+This example illustrates nested "for" loops, but you can nest different types of loops depending on the problem. For instance, you could use nested "while" loops or a "while" loop inside a "for" loop, based on the specific challenge.
+
+### Break Statement
+-------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/f9b24069-6b25-4857-acd5-fe4f3af51d2b)
+- Break statement
+
+Sometimes, you must break free from a loop, no matter what is going on in there. You can do that with the break statement. Imagine we are making a program to hunt down the letter A in a string.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/bf8e4f07-c076-4a3d-83cb-c68d719f0b5f)
+- Break statement
+
+The text input is ready, and now we'll search through it using a "for" loop. We start by initializing a variable "i" at zero and set the loop to run until "i" reaches the end of the text, determined by checking if "i" is less than the text's length. After each iteration, we increment "i" by one.
+
+Inside the loop, we retrieve the current letter using "text.charAt(i)" and store it in the variable "currentLetter." We then check if "currentLetter" is either an uppercase 'A' or a lowercase 'a'. If it is, we set "letterFound" to true and break out of the loop using the "break" keyword, as continuing the loop is unnecessary. The "break" statement is effective in all loop types.
+
+## Methods in Java
+
+### Creating Methods
+--------------------
+
+In Java, methods are essential tools within a class that allow us to break down complex problems into smaller, more manageable tasks. They perform specific functions and help avoid code repetition. While other programming languages may refer to them as functions or modules, in Java, we refer to them specifically as methods.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/48ae7fc3-af3f-4962-996d-36ee4612300f)
+- Method breakdown
+
+Methods in Java are tools designed to perform specific tasks and provide results. They begin with a header, which acts like an identification card specifying who can access them. If a method is declared "public," it can be used by any part of the program; otherwise, it's restricted to its package.
+
+The header includes additional details such as "static" or "final," although not all methods require these modifiers. Crucially, it also specifies the return type, indicating the type of value the method will produce. For instance, an "int" return type signifies that the method will return a whole number.
+
+Following the method's name in the header are parentheses, which serve as a receptacle for any necessary input the method requires. These parameters can be empty if the method doesn't need external data, but if it does, the specific inputs required are listed inside these parentheses.
+
+Each method has a unique signature, consisting of its name and parameter list, which distinguishes it from other methods within the class. After the header, enclosed in curly braces, lies the body of the method—the actual code that executes when the method is called.
+
+If the method doesn't return "void" (meaning it returns a value), it must conclude with a "return" statement, which sends the computed result back to where the method was called from. In Java, "return" holds a special significance as it finalizes the method's execution by passing back the desired outcome.
+
+### Calling Methods
+-------------------
+
+A method remains inactive until prompted to execute. For instance, in a program, we might first define a method to greet users by their names. Subsequently, we activate this method from our main method. It's important to note that all methods reside within a class's scope, and their sequence in the code doesn't significantly affect their functionality.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/fda080c2-5bba-49e8-af6a-331812249257)
+- Greeting method
+
+In Java programming, the order in which methods are written within a class doesn't affect their functionality; what matters is the sequence in which you call them. For example, our "greetUser" method could be positioned anywhere in the class, either before or after the main method. Its purpose is straightforward: it prompts the user for their name, stores it, and then uses that name to greet them warmly.
+
+However, simply writing the method isn't enough to make it execute. When you run a Java program, it starts executing from the main method by default. To activate the "greetUser" method, you need to explicitly call it by name within the main method or from any other method, regardless of where it's positioned within the class. This involves typing "greetUser();" to invoke it. Once called, the "greetUser" method will execute and perform its intended task of greeting the user with their name.
