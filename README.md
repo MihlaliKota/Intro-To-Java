@@ -718,3 +718,88 @@ A method remains inactive until prompted to execute. For instance, in a program,
 In Java programming, the order in which methods are written within a class doesn't affect their functionality; what matters is the sequence in which you call them. For example, our "greetUser" method could be positioned anywhere in the class, either before or after the main method. Its purpose is straightforward: it prompts the user for their name, stores it, and then uses that name to greet them warmly.
 
 However, simply writing the method isn't enough to make it execute. When you run a Java program, it starts executing from the main method by default. To activate the "greetUser" method, you need to explicitly call it by name within the main method or from any other method, regardless of where it's positioned within the class. This involves typing "greetUser();" to invoke it. Once called, the "greetUser" method will execute and perform its intended task of greeting the user with their name.
+
+### Variable Scope
+------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/adabce22-b5ef-4daf-8912-541064744df0)
+- Variable Scope
+
+A method does not run unless someone requests it. Imagine we are writing a code that creates a method to say hi to someone by their name, and then we are calling this method from our main code. All these methods have to chill inside a class, but the order you list them in does not really matter.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/e9cd439a-047c-47be-bb67-b162cfe65eda)
+- Variable scope illustration
+
+Variables in Java are akin to limited edition stickers—they are confined to where they are declared. If you define a variable within a specific scope enclosed by curly braces, such as "method1," you can only access it within that scope. Attempting to reference the variable in another method like "method2" will result in an error because the variable is confined to its home within "method1" and cannot be used outside of those curly braces.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/a3cd68b3-f78f-48cd-9ed8-5806ca8d3dc4)
+- Variable scope illustration
+
+A variable's scope in Java can be more limited than just within a method; it can be confined to a specific block of code, as seen in this example. At line four of the code snippet, a variable named "myVariable" is defined within an "if" statement. The scope of "myVariable" is determined by the curly braces surrounding its declaration. Therefore, "myVariable" can only be utilized within the confines of that particular "if" block. Even though line six is within the same method as "myVariable," it is outside of its scope and cannot refer to it.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/9ddb460d-1359-4f33-af5b-450d24a03ea3)
+- Local variable scope illustration
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/2f172508-1003-4b6a-93ac-2bc69c1a651a)
+- Global variable scope illustration
+
+Local variables are defined within methods, such as those inside loops or if statements. Conversely, global variables are defined outside of methods, typically within the class's curly braces. Global variables have broader accessibility, spanning the entire class, and can be accessed from any method within that class.
+
+In cases where both a global variable and a local variable share the same name, the local variable takes precedence within its narrower scope. For instance, if "myVariable" is declared globally on line two of a class, it can be accessed throughout the class. When referenced within "method1" on line five, the local variable named "myVariable" doesn't exist within the method, so the global "myVariable" is used by default.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/b05d4c8b-64af-4353-b2fd-7662c2efb95b)
+- Variable Scope examples
+
+When programming, variables can have different scopes that affect how they are accessed and used. Local variables are defined within methods, like those inside loops or conditional statements. In contrast, global variables are declared outside of methods, typically within the class's curly braces. Global variables have wider accessibility, being accessible from any method within the class.
+
+If a variable is declared both globally and locally with the same name, the local variable takes precedence within its narrower scope. For example, if "myVariable" is declared globally and then re-declared locally within a method, references to "myVariable" within that method will refer to the local instance.
+
+In another method, if "myVariable" is referenced and there is no local variable of that name, the global variable will be used by default. Modifications to "myVariable" within this context will affect the global variable's value. To explicitly refer to the global variable within a local scope, you can use the keyword "this" followed by the variable name. This informs the compiler that you want to access the version of "myVariable" associated with the class.
+
+When deciding whether to declare a variable globally or locally, consider where it needs to be used in your program. Use a local variable if it's only needed within a specific method or block of code. Opt for a global variable if it needs to be accessed and modified across multiple methods within the class.
+
+### Passing Data to Methods
+---------------------------
+
+Methods often require external data to perform their tasks effectively. This external data is provided through parameters, which act as inputs. For instance, consider a situation where we want to determine if someone qualifies for a loan based on their salary and credit score. Initially, in the main method, we collect these details from the user.
+
+To make a decision regarding loan eligibility, we create a separate method called "isUserQualified." This method will be defined outside of the main method and will take parameters such as salary and credit score as inputs. Its purpose is to evaluate these inputs against certain criteria to determine if the user meets the qualifications for a loan.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/7c0a8d54-92d2-43a4-8686-f8b661405771)
+- Passing data to methods
+
+The method "isUserQualified" requires access to the user's salary and credit score, which are initially confined within the main method. To enable "isUserQualified" to utilize these variables, we include them as parameters in its parameter list. Each parameter is defined with a specific data type and name, such as "int_creditScore" and "double_salary".
+
+Inside "isUserQualified", we introduce additional variables for the required salary (set at $25,000) and the required credit score (set at 700). An "if" statement is then implemented to evaluate if the user meets these criteria. If they do, an approval message like "Congrats, you have been approved" is printed; otherwise, a message indicating decline, such as "Sorry, you have been declined", is displayed.
+
+Once "isUserQualified" is defined and configured, it needs to be invoked to execute its logic. This invocation occurs directly from the main method by using its name and passing in the credit score and salary as arguments. It's important to note that despite using the same variable names for salary and credit score in both methods, they exist within different scopes, ensuring clarity and preventing confusion for the compiler.
+
+Furthermore, if the variable names in the main method are changed to "actualSalary" and "actualCreditScore", the method call to "isUserQualified" must be updated accordingly. This adjustment ensures there are no errors, as the order in which arguments are passed must align with the parameter list's order in the method definition. This strict adherence maintains clarity and precision for the compiler.
+
+### Returning Data from Methods
+-------------------------------
+
+Methods in Java perform actions and can optionally return values. Take the example of the "isUserQualified" method. Currently, it performs checks but doesn't return any value—it's a one-way operation. However, to enhance its functionality to return a yes or no answer (like true for approval and false for rejection), we modify its return type to boolean. 
+
+With this change, when the conditions inside the "if" statement are met, the method returns true; otherwise, it returns false. This allows the method to not only perform evaluations but also provide feedback based on those evaluations by returning a boolean value indicating whether the user qualifies for a loan.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/56ef454e-5fc3-4e00-924d-d29070b2ee02)
+- Returning data from methods
+
+When we use a method that returns a value, we capture that value and store it in a variable. Previously, we did this with methods like "nextDouble". This time, we'll do the same with "isUserQualified" and store its result in a variable called "qualified".
+
+Next, consider the method "notifyUser". It requires a boolean value (yes or no) when called, which it uses to determine the appropriate message to display. In the main method, we call "notifyUser" and pass it the "qualified" variable.
+
+During execution, when "isUserQualified" is called, the "qualified" variable receives its answer. If the value is false, "notifyUser" outputs a message like "Sorry, you have been declined". This process resembles following a flowchart, where each step depends on the result of the previous one.
+
+### Overloading Methods
+-----------------------   
+
+In Java, method overloading allows you to have multiple methods with the same name but different parameters within the same class. This concept is demonstrated in our "Month" class, where we have two "getMonth" methods. Each method's signature, defined by its name and parameter list, distinguishes it from others. One version of "getMonth" accepts an integer representing the month, while the other version takes a string as the month's name. 
+
+This approach is permissible because Java uses the method's parameter list to determine which version of the method to execute when it is called. You specify which method you intend to use by providing arguments that match the corresponding parameter list. Attempting to define overloaded methods with identical parameter lists results in a compilation error, indicating that the method is already defined. Even small variations in parameter names do not circumvent this rule; the parameter types and order must differ for successful method overloading.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/782367bd-d737-482b-8c28-44d98494f8d3)
+- Overloading methods
+
+Method overloading provides a convenient method for creating similar methods with slight variations. It enables cleaner code by allowing different scenarios to be handled with distinct methods, avoiding the clutter of conditional logic within a single method. This approach enhances code readability and maintainability by logically separating functionalities that differ based on parameters.
