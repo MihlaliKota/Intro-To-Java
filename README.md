@@ -803,3 +803,125 @@ This approach is permissible because Java uses the method's parameter list to de
 - Overloading methods
 
 Method overloading provides a convenient method for creating similar methods with slight variations. It enables cleaner code by allowing different scenarios to be handled with distinct methods, avoiding the clutter of conditional logic within a single method. This approach enhances code readability and maintainability by logically separating functionalities that differ based on parameters.
+
+## Objects in Java
+
+### Defining Classes for Objects
+--------------------------------
+
+In programming, objects are like containers that hold both data and actions. By creating an object, you can use these data and actions in various parts of your code. This concept is similar to building a blueprint for a rectangle, which includes all its features.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/c959a4b5-b8f9-4e70-9bf2-6654aaa0ed03)
+- classes for objects
+
+Think of a rectangle as a tangible object that can be held, with characteristics like length and width. These characteristics are like labels, which we call "fields." We declare these fields as "double length" and "double width."
+
+This class is a blueprint for creating rectangle objects. To create a specific rectangle, you would give it values for length and width later. Currently, the rectangle has no values, so if someone asks for its perimeter, it's like trying to calculate the area of nothing. We need a way to set these values. One way is to create "getter" and "setter" methods. These methods allow you to ask for the length or width with "double get length" or "double get width," and change them with "void set length" and "void set width." This way, anyone who uses a rectangle object can give it the right measurements.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/e45e05d8-5a09-4d45-b56a-208493a007ec)
+- Encapsulation
+
+In object-oriented programming (OOP), encapsulation is a fundamental concept that emphasizes keeping a class's data (fields) private while making its methods (behavior) accessible to other classes. To achieve encapsulation, we add a "private" label to our length and width fields and a "public" label to the methods we want to share, such as those for calculations and getters and setters. This ensures that our class is properly encapsulated.
+
+There is another access modifier called "protected," which is like a semi-public VIP area. Only classes within the same package can access it, similar to having no access modifier at all. Our rectangle class is like a blueprint, and encapsulation helps keep its internal workings private while making its methods accessible to other classes.
+
+### Java Constructors
+---------------------
+
+In addition to using setter methods, you can also set values for a class's fields using a constructor. Constructors are useful for initializing an object's state or setting its initial values. Every object has a constructor, and the default one is the first one you encounter.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/5e58ed8e-b7b0-4fba-800f-18f83cc9778a)
+- Constructors
+
+A default constructor is a constructor that does not take any parameters. If you want to create a rectangle object but are not ready to decide on its length or width yet, you can use this constructor without providing any values. The purpose of a default constructor is to give fields some default values.
+
+In Java, a default constructor is always present, even if not explicitly defined. It is an empty constructor that doesn't do anything.
+
+Let's break down the constructor:
+- Constructors start with a keyword like 'public'
+- They don't have a return type, even though they act like methods
+- The constructor's name must match the class name exactly (in this case, 'Rectangle')
+- They may have a set of parentheses containing parameters, but our default constructor has none
+- Curly braces enclose the constructor's body
+
+For a default constructor, the goal is to assign default values to the class's fields. In our case, we are setting the length and width to zero.
+
+You can have multiple constructors with the same name as the class but different parameters. For example, let's create another constructor for those who know the length and width upfront. We'll use 'public Rectangle' again but ask for 'double length' and 'double width' as parameters. To set the fields, we'll call the setter methods and pass the received parameters. This provides options for setting up a rectangle's state using these constructors.
+
+### Object Instantiation
+------------------------
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/f4f2a0ff-a3bd-47a0-9d1a-b1171bf900d8)
+- Object instantiation
+
+To calculate the area of rooms, we will create two objects based on the Rectangle class in the HomeAreaCalculator class. To create an object, we must instantiate the class it is based on. In this case, we are creating a room object that takes cues from the Rectangle class. We specify the object's data type as Rectangle, which is a class, not a basic data type like int or Boolean.
+
+Next, we give the object a name, "room1". We create an instance by using the keyword "new" followed by the class's constructor. Since the Rectangle class has two constructors, we will use the default one with no parameters. We say "Rectangle()" and add a semicolon. This creates the object.
+
+We can access an object's methods using the dot operator. We type the object's name, "room1", followed by a dot. We see a list of methods we can use with this Rectangle object. We set the width using "setWidth" and give it a value of 25, and set the length using "setLength" and give it a value of 50. Now that our room has meaningful dimensions, we can calculate the area using "room1.calculateArea".
+
+We create another room object, "room2", using the constructor that takes the length and width as arguments. We say "Rectangle room2 = new Rectangle" and feed it values. When we parse 30 and 75, IntelliJ assigns the corresponding values to "length" and "width".
+
+Using this constructor is like doing the same thing as lines 11 through 13, but in one line. To calculate the area of this room, we say "double areaOfRoom2" and use our trusty "room2" object to call "calculateArea".
+
+We have used the Rectangle class to model physical rooms. This class, like many others, does not care what you use it for. In our case, it is the blueprint for all kinds of rectangles, and we have chosen to use it to represent rooms in a house, which is a type of rectangle. In summary, a class is like a blueprint you can use to create specific objects tailored to your needs.
+
+### Method Parameters as Objects
+--------------------------------
+
+Objects can be used as method arguments, similar to primitive data types. For example, we have two Rectangle objects, representing the kitchen and bathroom, which we created by calling the Rectangle constructor and providing length and width values.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/b3a8638d-571b-4817-ada3-8311ce188955)
+- Method parameters as objects
+
+To find the total area, we create a public static method named calculateTotalArea that returns a double and takes two Rectangle objects as input parameters. Inside the method, we use the dot operator to call the calculateArea methods on the two objects and return their sum.
+
+In the main method, we call calculateTotalArea with the kitchen and bathroom objects as arguments. We store the returned value in a variable named totalArea. Finally, we print the total area with a message like "The total area is" followed by the area value.
+
+This demonstrates how to use objects as method parameters, allowing us to perform operations on them and return results.
+
+### Method Return Types
+-----------------------
+
+To create a method that returns both the length and width of a rectangle, we need to work around the limitation that methods can only return one value at a time. One way to do this is to make the method return an object, which can hold multiple values. Then, we can access the length and width of that object.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/b435435b-a57d-4737-906c-b6dc17de41bb)
+- Method return types
+
+Instead of directly creating kitchen and bathroom objects with fixed dimensions, we will use a method to create them. This method, called getRoom, will ask the user for the length and width and return an object with those dimensions.
+
+We can modify the getRoom method to return a Rectangle object instead of directly creating one. We specify the return type as Rectangle and create a new Rectangle object using the provided length and width. We then return this object.
+
+For the kitchen, we set the length to 200 and the width to 400. For the bathroom, we set the length to 300 and the width to 700. 
+
+### Wrapper Classes
+-------------------
+
+Wrapper classes, such as Integer, can transform primitive data types like int into objects. For example, number1 is an int, while number2 is an Integer, which is the objectified version of int. This transformation allows us to use the object's methods, which are not available with primitive data types.
+
+Using wrapper classes like Integer provides additional functionality compared to using primitive data types like int. This is because wrapper classes come with a set of useful methods that can be used to manipulate and work with the data.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/c816c054-3da9-4642-998d-73720d933790)
+- Wrapper classes
+
+The wrapper classes, such as Integer, are available for all basic data types and offer a range of useful methods. The Integer class, in particular, is like a treasure chest for handling integers. It provides constants like MIN_VALUE and MAX_VALUE to determine the smallest and largest values an integer can hold. Additionally, it includes methods like compare and compareTo for comparing integer values, conversion methods like doubleValue and floatValue to convert integers to other data types, and the parseInt method to convert a string with numbers into an actual integer.
+
+If you need to convert a plain integer variable into an Integer object to use these methods, you can use the valueOf method. Similar methods and features are available in other wrapper classes.
+
+### Records
+-----------
+
+A record in Java is similar to a class, but it is designed specifically for simple objects with fields and methods to handle those fields. For example, to create an "account" model, we use the "record" keyword instead of "class". We wrap the fields inside parentheses and curly braces. This creates a record with the specified fields. 
+
+Unlike a regular class, there's no need to write getter or setter methods for the fields. They are automatically generated in the background. However, if you want to add more methods, you can simply include them inside the curly braces.
+
+Records provide a concise way to define simple data structures, reducing the boilerplate code required in a regular class.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/d2fd8c5a-c5e4-4f46-88c9-ac9a35d5fae6)
+- Records
+
+Creating records is similar to creating classes. For example, to create an "account" record, you would say "new account" and provide the field values through the constructor.
+
+The key difference is that records are immutable, meaning once the field values are set, they cannot be changed. Unlike classes, records do not have setter methods, but they do have accessor methods. These accessor methods do not follow the conventional "get" naming convention; instead, they use the same name as the field itself. For example, you would access the "balance" field as "account.balance" rather than "account.getBalance".
+
+Records are particularly useful when working with simple objects that are set up once and accessed later in the code. These objects are often referred to as Plain Old Java Objects (POJOs). In summary, records provide a convenient way to simplify the code for basic objects.
