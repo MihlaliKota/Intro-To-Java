@@ -1,4 +1,4 @@
-# Intro-To-Java
+# Module 1: Java 101 - Introduction to Java
 
 ## Introduction
 
@@ -925,3 +925,39 @@ Creating records is similar to creating classes. For example, to create an "acco
 The key difference is that records are immutable, meaning once the field values are set, they cannot be changed. Unlike classes, records do not have setter methods, but they do have accessor methods. These accessor methods do not follow the conventional "get" naming convention; instead, they use the same name as the field itself. For example, you would access the "balance" field as "account.balance" rather than "account.getBalance".
 
 Records are particularly useful when working with simple objects that are set up once and accessed later in the code. These objects are often referred to as Plain Old Java Objects (POJOs). In summary, records provide a convenient way to simplify the code for basic objects.
+
+# Module 2: Java 102 - Java Fundamentals
+
+## Inheritance
+
+### Inheritance
+---------------
+
+Inheritance is a concept in programming where a new class, called the child or subclass, inherits all the attributes and methods from another class, known as the parent or superclass. This allows the child class to build upon the parent class, essentially extending its functionality.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/68b3ab5b-b996-46d3-9782-aa3a083cca0f)
+- Inheritance
+
+Inheritance enables classes to reuse and build upon existing data and functionality from other classes. Subclasses, being specialized versions of their parent classes, inherit and extend the capabilities provided by their superclasses.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/a5f4a4e0-6b36-4102-af3f-0dff62bfc0b7)
+- Inheritance illustration
+
+Let's demonstrate inheritance with code. 
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/228f960c-69e4-4dd6-8af4-6b98b3cc6ef0)
+- Person Class
+
+The concept of inheritance is demonstrated by creating a 'Person' class with attributes like 'name,' 'age,' and 'gender,' along with methods to access and modify these attributes. To create a more specialized 'Employee' class that inherits from 'Person' and adds additional information specific to employees, the 'extends' keyword is used in the 'Employee' class declaration.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/03f60f77-ed50-487a-8089-04c6cf47100a)
+- Employee Class
+
+The 'Employee' class inherits attributes and methods from the 'Person' class using the 'extends' keyword. This means 'Employee' automatically receives the 'name,' 'age,' and 'gender' attributes and their corresponding getter and setter methods from 'Person.' 'Employee' can then focus on its own unique attributes, such as 'employeeId' and 'title,' and create getter and setter methods for these using a shortcut. The 'Person' class serves as the superclass, while 'Employee' is the subclass, and the inheritance occurs through the 'extends' keyword in the subclass declaration.
+
+![image](https://github.com/MihlaliKota/Intro-To-Java/assets/133135575/527565b8-a6aa-4a9f-8dfb-998e9e55c2ee)
+- Inheritance Checker
+
+The 'InheritanceChecker' class demonstrates the usage of objects from the 'Person' and 'Employee' classes. When using the dot operator with the 'person' object, you can access the getter and setter methods for 'age,' 'gender,' and 'name' that are defined in the 'Person' class. However, when using the dot operator with the 'employee' object, you can access not only the methods inherited from the 'Person' class but also the methods defined within the 'Employee' class itself.
+
+Inheritance is a fundamental concept in object-oriented programming, allowing for efficient code reuse between related classes. By mastering inheritance, you have successfully grasped a crucial aspect of Java programming, enabling you to effectively share and build upon existing code.
